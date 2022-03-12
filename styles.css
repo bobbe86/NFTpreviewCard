@@ -1,0 +1,136 @@
+/* Custom properties/variables  */
+:root {
+    --main-cardBG: hsl(216, 50%, 16%);
+    --main-mainBG: hsl(217, 54%, 11%);
+    --main-line: hsl(215, 32%, 27%);
+    --main-white: hsl(0, 0%, 100%);
+    --main-text: hsl(215, 51%, 70%);
+}
+
+/* The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px 
+
+ ### Primary
+
+- Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%)
+
+### Neutral
+
+- Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%) */
+
+/* Base reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* box-sizing and font sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--main-mainBG);
+    color: var(--main-text);
+}
+
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+img {
+    border-radius: 50px;
+    padding: 1.5em;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.card {
+    margin-top: 100px;
+    padding: 0;
+    width: 400px;
+    height: auto;
+    border-radius: 25px;
+
+    background-color: var(--main-cardBG);
+}
+
+.card-title {
+    padding: 0 1.5em;
+    color: var(--main-white);
+}
+
+.card-body {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 1.5em;
+    font-size: 18px;
+    color: var(--main-text);
+}
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0;
+    width: 100%;
+
+}
+
+.border-bottom {
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--main-line);
+}
+
+
+.icon {
+    margin-right: 5px;
+    padding: 0;
+    float: left;
+}
+
+.cyan {
+    color: hsl(178, 100%, 50%);
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    margin-right: 1em;
+    padding: 1em;
+}
+
+.author {
+    width: 50px;
+    margin: 0 1em;
+    padding: 0;
+    border-radius: 50px;
+    border: 1px solid var(--main-white);
+}
+
+span {
+    color: var(--main-white);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
