@@ -5,6 +5,7 @@
     --main-line: hsl(215, 32%, 27%);
     --main-white: hsl(0, 0%, 100%);
     --main-text: hsl(215, 51%, 70%);
+    --main-hover: hsl(178, 100%, 50%);
 }
 
 /* The designs were created to the following widths:
@@ -46,29 +47,58 @@ html {
 
 
 .container {
+    position: relative;
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
 }
 
-img {
-    border-radius: 50px;
+.card-image {
+    position: relative;
+}
+
+.card-img {
+    display: block;
+    border-radius: 30px;
     padding: 1.5em;
     margin: 0 auto;
-    max-width: 100%;
+    width: 100%;
+
+}
+
+.card-overlay {
+    position: absolute;
+    top: 1.5em;
+    left: 1.5em;
+    bottom: 0;
+    right: 0;
+    width: 86%;
+    height: 86%;
+    border-radius: 5px;
+    background-color: var(--main-hover);
+    background-image: url(./images/icon-view.svg);
+    background-repeat:no-repeat;
+    background-position:center;
+    opacity: 0;
+}
+
+
+.card-overlay:hover {
+    opacity: .7;
+    cursor: pointer;
 }
 
 .card {
     margin-top: 100px;
     padding: 0;
-    width: 400px;
-    height: auto;
+    width: 350px;
     border-radius: 25px;
-
     background-color: var(--main-cardBG);
+    box-shadow: 0 0 ;
 }
 
 .card-title {
+    font-size: 18px;
     padding: 0 1.5em;
     color: var(--main-white);
 }
@@ -85,10 +115,16 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em 0;
+    padding: 1em .5em;
     width: 100%;
 
 }
+
+.card-title:hover, .name:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
 
 .border-bottom {
     width: 90%;
@@ -98,7 +134,7 @@ img {
 
 
 .icon {
-    margin-right: 5px;
+    margin-right: 10px;
     padding: 0;
     float: left;
 }
